@@ -2,10 +2,20 @@ body {
     background-color: black;
 }
 
-h1 {
+.texto-shadow {
     color: white;
     text-shadow: 0px 0px 10px cyan,
                  0px 0px 20px cyan,
                  0px 0px 40px cyan,
                  0px 0px 80px cyan;
+}
+
+.text-foto {
+    font-size: 15vw;
+    margin: 0;
+    background-image: url(1.jpg);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
