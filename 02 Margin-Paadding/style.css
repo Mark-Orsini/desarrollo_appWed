@@ -52,7 +52,7 @@
 }
 
 .row-2 {
-    margin: 0 48px 0px 20px; /* Pasa */
+    margin: 0 48px 0px 20px; /* Pasa de 48px a 20 para centar */
     background-color: purple;
     height: 100px;
 }
