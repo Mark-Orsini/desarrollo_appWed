@@ -20,7 +20,7 @@ body {
     color: white;
 }
 
-span {
+.span-t {
     color: #00ffff;
 }
 
@@ -37,14 +37,14 @@ span {
     margin-top: -10px;
 }
 
-h1 {
+.text-1 {
     text-align: left;
 }
 
-h2 {
+.texto2 {
     text-align: center;
 }
 
-h3 {
+.text-3 {
     text-align: end;
 }
