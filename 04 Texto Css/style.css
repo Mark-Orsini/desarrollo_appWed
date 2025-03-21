@@ -1,14 +1,13 @@
 * {
     padding: 0;
-    margin: 5px;
-    margin-top: 15px;
-    /* outline: solid 1px red; */
+    margin-top: 1px;
+    /* outline: solid 1px red;  */
     font-family: 'Courier New', Courier, monospace;
 }
 
 body {
     background-color: white;
-    margin: 5px 600px;
+    margin: 5px -10px;
 }
 
 .fondo {
@@ -27,18 +26,19 @@ body {
 .texto2 {
     background-color: #663399;
     color: white;
-    margin-top: -10px;
+    margin-top: -0.8%;
     font-style: italic;
 }
 
 .texto3 {
     background-color: #9fc5f8;
     text-decoration: underline;
-    margin-top: -10px;
+    margin-top: -0.8%;
 }
 
 .text-1 {
     text-align: left;
+    margin-left: 1%;
 }
 
 .texto2 {
@@ -47,4 +47,5 @@ body {
 
 .text-3 {
     text-align: end;
+    margin-right: 1%;
 }
