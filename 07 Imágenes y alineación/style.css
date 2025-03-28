@@ -5,9 +5,13 @@
 
 body {
     display: flex;
-    width: 99%;
+    width: 100%;
     justify-content: center;
     background-color: #f3f3ff;
+}
+
+.parent {
+    width: 1000px;
 }
 
 .texto-1 {
@@ -18,24 +22,34 @@ img {
     height: 200px;
 }
 
-.grupo1 {
+.grupo1, .grupo2, .grupo3, .grupo4, .grupo5 {
     display: flex;
-    background-color: #50c3ef;
-    justify-content: space-between;
+    justify-content: space-around;
     border-bottom: 15px solid #f3f3ff;
+}
+
+.grupo1 {
+    background-color: #50c3ef;
 }
 
 .grupo2 {
-    display: flex;
     background-color: #d896aa;
-    justify-content: space-evenly;
-    border-bottom: 15px solid #f3f3ff;
 }
 
 .grupo3 {
-    display: flex;
     background-color: #fff;
-    justify-content: space-between;
+}
+
+.grupo4 {
+    background-color: red;
+}
+
+.grupo5 {
+    background-color: black;
+}
+
+.imgen-2 {
+    width: 210px;
 }
 
 .texto-2 {
@@ -46,5 +60,4 @@ img {
     color: #7abbfe;
     text-decoration: underline;
     cursor: pointer;
-    margin-left: -10px;
 }
