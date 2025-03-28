@@ -50,6 +50,7 @@ img {
 
 .imgen-2 {
     width: 210px;
+    object-fit: contain;
 }
 
 .texto-2 {
