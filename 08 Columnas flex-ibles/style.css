@@ -1,0 +1,29 @@
+* {
+    outline: solid 1px red;
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    
+    margin-top: 20px;
+    height: 50px;
+}
+
+.col {
+    flex: 1;
+    background-color: rgb(52, 109, 109);
+    margin: 0px 20px 0px 0px;
+}
+
+.col-2 {
+    flex: 2;
+    background-color: rgb(52, 109, 109);
+    margin: 0px 20px 0px 0px;
+}
+
+.col-3 {
+    flex: 3;
+    background-color: rgb(52, 109, 109);
+    margin: 0px 0px 0px 0px;
+}
