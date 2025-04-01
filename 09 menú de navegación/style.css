@@ -1,0 +1,40 @@
+* {
+    outline: solid 1px red;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(54, 54, 54);
+    color: white;
+}
+
+.barra, .pt2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.barra {
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgb(277, 228, 237, 0.99);
+    border: 2px solid rgb(255, 255, 255, 0.18);
+    height: 50px;
+    padding: 10px;
+}
+
+.texto-1 {
+    text-align: center;
+}
+
+.d_btn {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    border-radius: 10px;
+    width: 90px;
+    color: white;
+    background-color: #17a2b8;
+}
