@@ -1,0 +1,18 @@
+* {
+    outline: solid 1px red;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.padre {
+    background-color: red;
+    width: 500px;
+}
+
+.hijo {
+    background-color: green;
+    width: 300px;
+    margin: 0 auto;
+}
