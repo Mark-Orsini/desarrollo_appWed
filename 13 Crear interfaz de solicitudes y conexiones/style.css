@@ -5,20 +5,20 @@
 
 body {
     margin: 0;
-    padding: 50px;
+    padding: 20px;
 }
 
 .padre {
-    max-width: 600px;
+    max-width: 650px;
     margin: 0 auto;
     border-radius: 25px;
     background-color: #edf0f2;
     padding: 20px;
-    min-height: 610px;
+    min-height: 600px;
 }
 
 .hijo1, .hijo2 {
-    max-width: 500px;
+    max-width: 550px;
     background-color: aliceblue;
     border-radius: 25px;
     margin: 0 auto;
@@ -69,6 +69,31 @@ body {
     margin-left: 240px;
     margin-top: 10px;
 } */
+
+.btn-img-f {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    border: solid 1px transparent;
+    background-color: transparent;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.img-foto-1 {
+    width: 30px;
+    height: 30px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.btn-conjunto {
+    margin-left: 235px;
+}
+
+.conjunto2 {
+    margin-left: 241px;
+}
 
 .usua {
     display: flex;
