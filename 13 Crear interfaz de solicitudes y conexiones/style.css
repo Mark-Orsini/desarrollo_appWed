@@ -1,5 +1,5 @@
 * {
-    /* outline: solid 1px red; */
+    outline: solid 1px red;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -88,11 +88,20 @@ body {
 }
 
 .btn-conjunto {
-    margin-left: 235px;
+    display: flex;
+    gap: 10px;
 }
 
-.conjunto2 {
-    margin-left: 245px;
+/* .conjunto2 {
+    
+} */
+
+.user2 {
+    justify-content: space-between;
+}
+
+.imgYText {
+    display: flex;
 }
 
 .usua {
