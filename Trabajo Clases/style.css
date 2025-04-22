@@ -8,7 +8,7 @@
 img {
     width: 50px;
 }
-
+/* aqui comienza la modificacion para el contenedor */
 .padre {
     display: flex;
     font-size: 30px;
@@ -23,7 +23,7 @@ img {
     flex-flow: wrap;
     gap: 40px;
 }
-
+/* se modifica las etiquetas a */
 a {
     text-decoration: none;
     font-size: 30px;
