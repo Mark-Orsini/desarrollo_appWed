@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #332e54;
+    /* outline: solid red 1px; */
+}
+
+img {
+    width: 50px;
+}
+
+.padre {
+    display: flex;
+    font-size: 30px;
+    gap: 50px;
+    padding: 10px;
+    margin-left: 25px;
+}
+
+.conte {
+    margin: 6px;
+    display: flex;
+    flex-flow: wrap;
+    gap: 40px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 30px;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.img-rede {
+    margin-top: 40px;
+    width: 30px;
+    display: flex;
+    margin-left: 10px;
+}
+
+.imgs-redes {
+    display: flex;
+    gap: 1px;
+}
+
+.cont-2 {
+    margin-top: 5px;
+}
+
+.text-titulo {
+    font-size: 70px;
+}
+
+.text-titulo-2 {
+    margin-bottom: 20px;
+}
+
+.text-par, .nombre, .descripcion-n {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.xo {
+    margin-bottom: 70px;
+}
+
+.img-perso {
+    width: 400px;
+    margin-bottom: 30px;
+}
+
+.imgs {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.ix {
+    height: 403px;
+}
+
+.cont-2 {
+    font-size: 20px;
+    display: flex;
+    gap: 10px;
+    margin-left: 6px;
+}
+
+.img-copy {
+    width: 23px;
+    height: 23px;
+}
+
+.hijo {
+    text-align: center;
+    width: 100%;
+}
