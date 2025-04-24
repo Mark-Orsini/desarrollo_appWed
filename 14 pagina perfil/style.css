@@ -1,8 +1,8 @@
 * {
-    margin: 1px;
+    margin: 0px;
     padding: 0px;
     /* font-family: 'comic sans ms'; */
-    /* outline: solid 1px red; */
+    outline: solid 1px red;
 }
 
 /* Aqui empieza la barra de navegacion */
@@ -34,7 +34,6 @@ body {
     top: 20px;
 }
 
-
 .pt2 {
     display: flex;
 }
@@ -55,21 +54,6 @@ body {
     width: 110px;
 }
 
-@keyframes border-colo {
-    0%, 100% {
-        border-color: green;
-        box-shadow: 0px 0px 30px green;
-    }
-    25%, 75% {
-        border-color: red;
-        box-shadow: 0px 0px 30px red;
-    }
-    50% {
-        border-color: blue;
-        box-shadow: 0px 0px 30px blue;
-    }
-}
-
 a {
     color: #fff;
     text-decoration: none;
@@ -87,33 +71,25 @@ a:hover {
 .abuelo {
     margin: 15px;
     display: flex;
-    justify-content: center;
-    /* flex-wrap: wrap; */
+    justify-content: space-around;
+    flex-wrap: wrap;
     gap: 50px;
-    flex: 3;
     padding: 30px;
+    /* flex: 3; */
 }
 
 .padre {
-    /* margin: 0 auto; */
-    /* margin-top: 50px; */
-    /* width: 700px; */
-    /* border: 5px solid black; */
     color: black;
     text-align: center;
     border-radius: 20px;
-    max-width: 800px;
-    flex-grow: 1;
-    /* min-width: 1000px; */
-    /* margin-left: 50px;
-    margin-top: 1px; */
+    flex: 4;
     background-color: white;
     max-height: 440px;
 }
 
 .cuadro-superior {
     background-color: #3798dc;
-    height: 110px;
+    height: 140px;
     border-radius: 20px 20px 0px 0px;
 }
 
@@ -172,17 +148,17 @@ a:hover {
 /* Aqui empieza las solicitudes */
 
 .padre-3 {
-    max-width: 530px;
     /* margin: 0 auto; */
     border-radius: 25px;
     background-color: #edf0f2;
     /* padding: 20px; */
     /* min-height: 600px; */
     color: black;
+    flex: 2;
 }
 
 .hijo1, .hijo2 {
-    max-width: 550px;
+    flex: 1;
     background-color: aliceblue;
     border-radius: 25px;
     margin: 0 auto;
@@ -252,7 +228,8 @@ a:hover {
 
 .btn-conjunto {
     display: flex;
-    gap: 10px;
+    gap: 15px;
+    padding-right: 10px;
 }
 
 /* .conjunto2 {
