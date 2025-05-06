@@ -1,18 +1,18 @@
 // Variables
-let numeroEntero = 5;
-let numeroDecimal = 3.14;
-let cadenaTexto = "Hola Mundo";
-let valorBooleano = true;
-let arregloNumeros = [1,2,3,4,5];
-let objetoPersona = {
+let numeroEntero = 5;                           // variable tipo entero
+let numeroDecimal = 3.14;                       // variable tipo decimal
+let cadenaTexto = "Hola Mundo";                 // variable tipo string
+let valorBooleano = true;                       // variable tipo boolenao
+let arregloNumeros = [1,2,3,4,5];               // variable tipo arreglo
+let objetoPersona = {                           // variable tipo objeto
     nombre: "Mark",
     edad: 17
 };
-let valorIndefinido;
-let valorNulo = null;
-let identificadorUnico = Symbol(1);
-let numeroGrande = BigInt(3267846732648764876);
-const mes = "Mayo";
+let valorIndefinido;                            // variable tipo indefinido
+let valorNulo = null;                           // variable tipo Null
+let identificadorUnico = Symbol(1);             // variable tipo dato unico
+let numeroGrande = BigInt(3267846732648764876); // variable tipo int grande
+const mes = "Mayo";                             
 
 // Funciones
 function numeroE() {
@@ -63,9 +63,10 @@ function operacion() {
     return numeroDecimal + numeroEntero;
 };
 
-
+// imprimir en consola
 console.log("Hola Mundo");
 
+// llamado de funciones
 numeroE();
 numeroD();
 cadenaT();
@@ -78,4 +79,6 @@ identificadorUn();
 numeroG();
 messs();
 let resultado = operacion();
+
+// imprimir en consola
 console.log(resultado)
