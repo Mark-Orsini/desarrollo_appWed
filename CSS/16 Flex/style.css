@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* outline: solid red 1px; */
+}
+
+body {
+    background-color: white;
+    display: flex;
+    margin-top: 50px;
+}
+
+.padre {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #e6e6e6;
+}
+
+.hijo2,
+.hijo1 {
+    display: flex;
+}
+
+
+.x {
+    background-color: #b2b5b4;
+    text-align: center;
+    margin: 10px;
+}
+
+.A1 {
+    min-width: 200px;
+    min-height: 132px;
+}
+
+.aa {
+    min-height: 66.6px;
+}
+
+.A2 {
+    min-width: 100px;
+    min-height: 100px;
+}
+
+.C1 {
+    min-width: 100px;
+    min-height: 155px;
+    flex: 1;
+}
+
+.C2 {
+    min-width: 200px;
+    min-height: 70px;
+    flex: 2;
+}
+
