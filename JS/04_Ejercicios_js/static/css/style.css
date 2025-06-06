@@ -1,6 +1,7 @@
 * {
     padding: 0;
     margin: 0;
+    /* outline: solid red 1px; */
 }
 
 body {
@@ -9,6 +10,17 @@ body {
     flex-flow: column;
     text-align: center;
     padding: 20px;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    flex-flow: wrap;
+    align-items: center;
+    gap: 5px;
+    row-gap: 15px;
 }
 
 .text-titulo {

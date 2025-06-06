@@ -4,12 +4,13 @@ let compras = [];
 function usarPush() {
     compras.push("pan", "leche", "huevos")
     alert("El array tiene: "+compras.join(" - "))
-};
+}
 
 // ejercicio 2
 function usarPop() {
     let basura = compras.pop()
     alert(`Elemento eliminado: ${basura}`)
+    alert(`Quedo asi: ${compras}`)
 }
 
 // ejercicio 3
@@ -29,20 +30,22 @@ function usarShift() {
 let numeros = [10, 20, 30]
 function agregarNumeros() {
     numeros.push(40)
-    alert("Le agregamos 40 al final")
+    console.log("Le agregamos 40 al final")
     numeros.shift()
-    alert("Le quitamos el primer numero")
-    numeros.unshift("5")
-    alert("Le agregamos un 5 al inicio")
+    console.log("Le quitamos el primer numero")
+    numeros.unshift(5)
+    console.log("Le agregamos un 5 al inicio")
     numeros.pop()
-    alert("Eliminamos el ultimo numero")
-    alert(`El arreglo quedo asi: ${numeros}`)
+    console.log("Eliminamos el ultimo numero")
+    console.log(`El arreglo quedo asi: ${numeros}`)
 }
 
 // ejercicio 6
 let orden = []
 function ordenar() {
-    orden.unshift("1","2","3")
+    orden.unshift(3)
+    orden.unshift(2)
+    orden.unshift(1)
     console.log(orden)
 }
 
@@ -58,4 +61,80 @@ function historialPro() {
     alert("El nuevo arreglo es: " + historial.join(" - "))
     let basura = historial.pop()
     alert(`Elemento eliminado: ${basura}`)
+}
+
+// ejercicio 8 
+let cola = ["Cliente1", "Cliente2", "Cliente3"]
+function colaAtencion() {
+    alert(cola)
+    let basura = cola.shift()
+    alert(`Le quitamos ${basura}`)
+    cola.push("Cliente4")
+    alert("Le agregamos Cliente4")
+    alert("La cola quedo asi "+cola)
+}
+
+// ejercicio 9 
+function nombresA() {
+    let nombres = ["Pedro", "Juan", "Luis"]
+    alert(nombres)
+    let basura = nombres.pop()
+    alert(`Quitamos el nombre ${basura}`)
+    nombres.unshift("Mateo")
+    alert("Agregamos a Mateo al inicio")
+    nombres.push("Ana")
+    alert("Agregamos a Ana al final")
+    alert(nombres)
+}
+
+// ejercicios 10
+function pilasColas() {
+    let pila = []
+    pila.push("Ayer","Hoy","Mañana")
+    alert(pila)
+    pila.pop()
+    pila.pop()
+    let colaNueva = []
+    colaNueva.push("Martes","Miercoles","Jueves")
+    colaNueva.shift()
+    colaNueva.shift()
+    alert(`La pila quedo asi: ${pila}`)
+    alert(`La cola quedo asi: ${colaNueva}`)
+}
+
+// ejercicio 11
+let dias = ["lunes", "miércoles", "jueves"]
+function semana() {
+    dias.push("viernes")
+    dias.shift()
+    dias.unshift("Martes")
+    dias.unshift("Lunes")
+    alert(dias)
+}
+
+// ejercicio 12
+let personas = ["Carlos", "María", "Luis", "Ana", "Sofía"]
+//              ["Pedro", "María", "Luis", "Camila"]
+function personasOrden() {
+    alert(personas)
+    personas.shift()
+    personas.unshift("Pedro")
+    personas.pop()
+    personas.pop()
+    personas.push("Camila")
+    alert(`El nuevo listado es: ${personas}`)
+}
+
+// ejercicio 13 
+let tareas = ["comer", "estudiar", "dormir", "jugar", "ver TV", "navegar"]
+//           ["comer", "estudiar", "lavar la ropa", "organizar escritorio"]
+function ordenTarea() {
+    alert(`El orden actual es: ${tareas}`)
+    tareas.pop()
+    tareas.pop()
+    tareas.pop()
+    tareas.pop()
+    tareas.push("lavar la ropa")
+    tareas.push("organizar escritorio")
+    alert(`El nuevo orden es: ${tareas}`)
 }
