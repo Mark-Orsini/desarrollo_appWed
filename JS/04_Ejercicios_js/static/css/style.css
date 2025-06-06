@@ -6,14 +6,16 @@
 
 body {
     background-color: black;
-    display: flex;
-    flex-flow: column;
     text-align: center;
     padding: 20px;
     align-items: center;
+    box-shadow: -6px 13px 100px 23px #00b35f inset;
+    height: 950px;
+    background: #ffffff url(./cyberpunk-hacker.gif) center center/cover no-repeat;
 }
 
 .container {
+    margin: 250px auto;
     display: flex;
     justify-content: center;
     max-width: 600px;
@@ -30,6 +32,8 @@ body {
                  0px 0px 40px #00ff88,
                  0px 0px 80px #00ff88;
     margin: 20px;
+    position: relative;
+    top: 220px;
 }
 
 .btn {
@@ -37,7 +41,7 @@ body {
     font-size: 18px; font-weight: bold;
     color: #00ff88; text-transform: uppercase;
     text-decoration: none;
-    background-color: transparent;
+    background-color: black;
     border: 2px solid #00ff88;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 255, 136, 0.5), 0 0 20px
