@@ -21,3 +21,22 @@ function nuevoProducto() {
         console.log("...")
     }
 }
+
+function mostrarNuevoProducto(){
+    let productos = ["pan", "leche", "queso"];
+    let nuevoProducto = prompt("Ingrese un nuevo Producto");
+    if (productos[0] == nuevoProducto){
+        document.getElementById("resultado").innerHTML =
+        `<p>El producto: <strong>${nuevoProducto}</strong> ingresado.</p>`;
+    } else if(productos[1] == nuevoProducto){
+        document.getElementById("resultado").innerHTML =
+        `<p>El producto: <strong>${nuevoProducto}</strong> ingresado.</p>`;
+    } else if(productos[2] == nuevoProducto){
+        document.getElementById("resultado").innerHTML =
+        `<p>El producto: <strong>${nuevoProducto}</strong> ingresado.</p>`;
+} else{
+        productos.push(nuevoProducto);
+        document.getElementById("resultado").innerHTML =
+        `<p>Nueva lista de productos: <strong>${productos.join(" - ")}</strong> ingresado.</p>`;
+}
+}
