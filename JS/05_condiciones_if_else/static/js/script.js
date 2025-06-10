@@ -17,7 +17,7 @@ function mayoriaEdad() {
 function nuevoProducto() {
     let producto = ["pan", "leche", "queso"];
     let nuevoProdu = prompt("Ingrese un nuevo producto");
-    id (producto[0] == nuevoProdu) {
-        
+    if (producto[0] == nuevoProdu) {
+        console.log("...")
     }
 }
