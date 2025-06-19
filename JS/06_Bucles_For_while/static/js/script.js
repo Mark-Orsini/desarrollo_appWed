@@ -124,8 +124,8 @@ function contarMayores() {
         let edad = parseInt(prompt("Ingrese la edad de la persona " + n + ":"));
         if (edad >= 18) {
             mayores++;
-        }
-    }
+        };
+    };
 
     alert("Cantidad de personas mayores de edad: " + mayores);
     document.getElementById("contarMayores").innerHTML +=
