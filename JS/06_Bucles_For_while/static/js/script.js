@@ -55,10 +55,14 @@ function contadorRegresivo() {
 
 // Ejercicio 5
 function tablaMultiplicar() {
+    let listaR = []
     let numero = parseInt(prompt("Ingrese el numero de la tabla: "))
     for (let n = 1; n <= 10; n++) {
-        alert(numero * n);
+        // alert(numero * n);
+        listaR.push(numero * n)
     };
+    document.getElementById("tablaMultiplicar").innerHTML =
+    `<p>Los numeros multiplicados por ${numero} son: ${listaR.join("-")}</p>`;
 };
 
 // Ejercicio 6
