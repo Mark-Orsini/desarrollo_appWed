@@ -42,13 +42,13 @@ function mostrarPar() {
 // Ejercicio 4
 function contadorRegresivo() {
     let numero = parseInt(prompt("Ingrese para la cuenta regresiva: "));
+    if (numero === 0) {
+        alert("Número no válido");
+    }
     while (numero >= 0) {
-        alert(numero);
+        // alert(numero);
         document.getElementById("contadorRegresivo").innerHTML =
         `<p>${numero}</p>`;
-        if (numero === 0) {
-            alert("Número no válido");
-        }
         numero--;
     };
 };
@@ -60,6 +60,7 @@ function tablaMultiplicar() {
     for (let n = 1; n <= 10; n++) {
         // alert(numero * n);
         listaR.push(numero * n)
+
     };
     document.getElementById("tablaMultiplicar").innerHTML =
     `<p>Los numeros multiplicados por ${numero} son: ${listaR.join("-")}</p>`;
@@ -87,7 +88,7 @@ function mostrarLetras() {
     if (palabra) {
         for (let i = 0; i < palabra.length; i++) {
             document.getElementById("mostrarLetras").innerHTML +=
-            `<p>Letra ${i + 1}: ${palabra[i]}</p>`;
+            `<p> ${i + 1}: ${palabra[i]}</p>`;
         };
     };
 };
@@ -97,8 +98,10 @@ function pedirClave() {
     let contrasena;
     while (contrasena !== "admin123") {
         contrasena = prompt("Ingrese la contraseña: ");
-    }
-    alert("Acceso concedido");
+        if (contrasena !== "admin123") {
+            alert("Acceso denegado")
+        };
+    };
     document.getElementById("pedirClave").innerHTML +=
             `<p>Acceso concedido</p>`;
 };
