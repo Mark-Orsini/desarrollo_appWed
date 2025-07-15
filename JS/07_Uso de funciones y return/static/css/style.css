@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* outline: solid red 1px; */
+}
+
+body {
+    /* Puedes ajustar estos valores para obtener el verde que prefieras en el fondo */
+    background: #002402; /* Un verde oscuro como base */
+    background: linear-gradient(nulldeg, rgba(0, 36, 0, 1) 0%, rgba(9, 121, 9, 1) 35%, rgba(0, 255, 0, 1) 100%);
+}
+
+.container {
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.eje {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    flex-shrink: 0;
+    margin-bottom: 20px;
+    border: 1px solid rgba(4, 196, 4, 0.5); /* Borde verde */
+    border-radius: 8px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(4, 196, 4, 0.3); /* Sombra verde */
+}
+
+.text, .tx, .text-titulo {
+    color: rgb(19, 236, 19); /* Color de texto verde brillante */
+    text-shadow:0px 0px 10px #04c404, /* Sombra de texto verde */
+    0px 0px 20px #04c404,
+    0px 0px 40px #04c404,
+    0px 0px 80px #04c404;
+    margin: 10px 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.text-titulo {
+    font-size: 40px;
+    margin-top: 30px;
+}
+
+.nav {
+    text-align: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #04c404; /* Color de texto del botón verde */
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: transparent;
+    border: 2px solid #04c404; /* Borde del botón verde */
+    border-radius: 5px;
+    box-shadow:
+        0 0 10px rgba(4, 196, 4, 0.5), /* Sombra del botón verde */
+        0 0 20px rgba(4, 196, 4, 0.3),
+        0 0 30px rgba(4, 196, 4, 0.2),
+        inset 0 0 10px rgba(4, 196, 4, 0.7);
+    transition: all 0.4s ease;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.btn:hover {
+    background-color: rgba(4, 196, 4, 0.1); /* Fondo del botón al pasar el ratón verde */
+    box-shadow:
+        0 0 15px rgba(4, 196, 4, 0.7), /* Sombra del botón al pasar el ratón verde */
+        0 0 25px rgba(4, 196, 4, 0.5),
+        0 0 35px rgba(4, 196, 4, 0.3),
+        inset 0 0 15px rgba(4, 196, 4, 0.9);
+}
+
+.tx {
+    font-size: 14px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    border: 1px dashed rgba(4, 196, 4, 0.3); /* Borde punteado verde */
+    padding: 5px;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .eje {
+        width: 90%;
+        margin-bottom: 15px;
+    }
+
+    .text-titulo {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-titulo {
+        font-size: 25px;
+    }
+    .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    .text, .tx {
+        font-size: 16px;
+    }
+}
+
+.input {
+    padding: 10px;
+    border: 1px solid rgba(4, 196, 4, 0.5); /* Borde similar al de .eje */
+    border-radius: 8px; /* Mismo border-radius que .eje */
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro con transparencia */
+    color: rgb(19, 236, 19); /* Color de texto verde brillante */
+    font-size: 16px;
+    width: calc(100% - 22px); /* Ancho completo menos padding y borde */
+    box-shadow: 0 0 5px rgba(4, 196, 4, 0.3); /* Sombra verde */
+    margin-bottom: 10px;
+}
+
+.input::placeholder {
+    color: rgba(19, 236, 19, 0.7); /* Color del placeholder */
+}
+
+.input:focus {
+    outline: none; /* Quita el contorno por defecto al enfocar */
+    border-color: rgb(19, 236, 19); /* Borde más intenso al enfocar */
+    box-shadow: 0 0 8px rgba(19, 236, 19, 0.5); /* Sombra más intensa al enfocar */
+}
