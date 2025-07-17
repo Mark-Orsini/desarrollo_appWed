@@ -146,3 +146,17 @@ body {
     border-color: rgb(19, 236, 19); /* Borde más intenso al enfocar */
     box-shadow: 0 0 8px rgba(19, 236, 19, 0.5); /* Sombra más intensa al enfocar */
 }
+
+/* Nuevo contenedor para los inputs */
+.input-container {
+    display: flex; /* Activa Flexbox para alinear los hijos horizontalmente */
+    gap: 10px;     /* Crea un espacio de 10px entre los inputs */
+    width: 100%;   /* Ocupa todo el ancho del contenedor padre (.eje) */
+    margin-bottom: 10px; /* Mantiene el espacio con el botón de abajo */
+}
+
+/* Ajuste para los inputs dentro del nuevo contenedor */
+.input-container .input {
+    width: 100%; /* El input se expandirá para ocupar el espacio disponible */
+    margin-bottom: 0; /* Quitamos el margen inferior porque ya lo tiene el contenedor */
+}
