@@ -99,7 +99,7 @@ function esPrimo(num) {
     // la raíz cuadrada de un número.
     for (let i = 2; i <= Math.sqrt(num); i++) {
         
-        // 3. Si encontramos un divisor exacto (resto 0), no es primo.
+        // 3. Si encontramos un divisor exacto resto 0, no es primo.
         if (num % i === 0) {
         return `${num} no es primo`;
         }
