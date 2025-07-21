@@ -101,7 +101,7 @@ function esPrimo(num) {
         
         // 3. Si encontramos un divisor exacto resto 0, no es primo.
         if (num % i === 0) {
-        return `${num} no es primo`;
+            return `${num} no es primo`;
         }
     }
 
