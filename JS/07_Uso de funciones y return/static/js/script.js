@@ -37,8 +37,8 @@ function compararNumeros(input1, input2) {
         return "Por favor, ingresa ambos numeros.";
     }
 
-    let num1 = parseFloat(input1);
-    let num2 = parseFloat(input2);
+    let num1 = parseInt(input1);
+    let num2 = parseInt(input2);
 
     if (num1 > num2) {
         return `${num1} es mayor que ${num2}`;
@@ -120,7 +120,10 @@ function mostrarPrimo() {
 
 /*
 🟦 Ejercicio 5: Calcular potencia con bucle
-📌 Pide al usuario una base y un exponente mediante input. Usa una función que reciba ambos valores como parámetros, calcule la potencia utilizando un bucle, y retorne el resultado. Finalmente, muestra el valor calculado en html.
+📌 Pide al usuario una base y un exponente mediante input. 
+Usa una función que reciba ambos valores como parámetros, 
+calcule la potencia utilizando un bucle, y retorne el resultado. 
+Finalmente, muestra el valor calculado en html.
 */
 
 function calculo(input1, input2) {
