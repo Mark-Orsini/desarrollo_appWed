@@ -37,8 +37,8 @@ function compararNumeros(input1, input2) {
         return "Por favor, ingresa ambos numeros.";
     }
 
-    let num1 = parseInt(input1);
-    let num2 = parseInt(input2);
+    let num1 = parseFloat(input1);
+    let num2 = parseFloat(input2);
 
     if (num1 > num2) {
         return `${num1} es mayor que ${num2}`;
