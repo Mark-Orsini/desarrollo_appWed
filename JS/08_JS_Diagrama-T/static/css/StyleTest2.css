@@ -1,0 +1,184 @@
+/* ------------------------------------------- */
+/* --- 1. VARIABLES Y ESTILOS GLOBALES --- */
+/* ------------------------------------------- */
+
+/* --- PALETA BASE Y VARIABLE RGB --- */
+:root {
+    --color-fondo: #0F2027;      /* Un azul verdoso muy oscuro, como un bosque de noche */
+    --color-caja: #203A43;       /* Un tono más claro, como neblina */
+    --color-texto: #EFEFEF;       /* Blanco suave para máxima legibilidad */
+    --color-input: #10222B;       /* Una versión más oscura del fondo para los inputs */
+    
+    /* MODIFICADO: Hemos reemplazado el color de acento estático por una variable que se animará. */
+    /* El valor inicial es el primer color de nuestra animación. */
+    --color-acento-rgb: #ff3b3b;
+}
+
+/* Reseteo básico y configuración de la fuente */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-fondo);
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-texto);
+    
+    /* AÑADIDO: Aplicamos la animación al body. Esto hace que la variable --color-acento-rgb cambie constantemente. */
+    animation: cambiar-color-rgb 900ms linear infinite;
+}
+
+/* ------------------------------------------- */
+/* --- 2. LAYOUT PRINCIPAL (HEADER Y MAIN) --- */
+/* ------------------------------------------- */
+
+.nav {
+    background-color: var(--color-caja);
+    padding: 1.5rem;
+    text-align: center;
+    
+    /* MODIFICADO: El borde ahora usa la variable animada. */
+    border-bottom: 3px solid var(--color-acento-rgb);
+    transition: border-color 0.5s ease; /* Añadimos transición para un cambio de color más suave */
+}
+
+.text-titulo {
+    /* MODIFICADO: El color del texto y la sombra ahora usan la variable animada. */
+    color: var(--color-acento-rgb);
+    font-size: 2rem;
+    text-shadow: 0 0 8px var(--color-acento-rgb);
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+}
+
+/* Usamos CSS Grid para un layout de tarjetas responsive */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ---------------------------------------------------- */
+/* --- 3. ESTILO DE LAS CAJAS DE EJERCICIO (.eje) --- */
+/* ---------------------------------------------------- */
+
+.eje {
+    background-color: var(--color-caja);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.eje:hover {
+    transform: translateY(-8px);
+    
+    /* MODIFICADO: La sombra al pasar el mouse ahora usa la variable animada. */
+    box-shadow: 0 8px 30px var(--color-acento-rgb);
+}
+
+.eje .text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    
+    /* MODIFICADO: El color y la sombra del título de la tarjeta usan la variable animada. */
+    color: var(--color-acento-rgb);
+    text-shadow: 0 0 6px var(--color-acento-rgb);
+    
+    border-bottom: 1px solid #ffffff20;
+    padding-bottom: 0.5rem;
+    transition: color 0.5s ease, text-shadow 0.5s ease;
+}
+
+/* Contenedor para los inputs dobles */
+.input-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.input-container .input {
+    width: 100%;
+}
+
+/* --------------------------------------------------- */
+/* --- 4. ESTILO DE INPUTS, BOTONES Y RESULTADOS --- */
+/* --------------------------------------------------- */
+
+.input {
+    background-color: var(--color-input);
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 0.8rem;
+    color: var(--color-texto);
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.input::placeholder {
+    color: #ffffff80;
+}
+
+.input:focus {
+    outline: none;
+    
+    /* MODIFICADO: El borde al enfocar el input ahora usa la variable animada. */
+    border-color: var(--color-acento-rgb);
+}
+
+.btn {
+    /* MODIFICADO: El fondo del botón ahora usa la variable animada. */
+    background-color: var(--color-acento-rgb);
+    
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease, background-color 0.5s ease;
+}
+
+.btn:hover {
+    filter: brightness(1.2);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.tx {
+    background-color: rgba(0, 0, 0, 0.2);
+    min-height: 40px;
+    border-radius: 8px;
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+/* --------------------------------------------------- */
+/* --- 5. ANIMACIÓN RGB --- */
+/* --------------------------------------------------- */
+
+/* AÑADIDO: Esta es la animación que cambia el valor de nuestra variable. */
+/* Recorre diferentes colores para crear el efecto arcoíris. */
+@keyframes cambiar-color-rgb {
+    0%   { --color-acento-rgb: #ff3b3b; } /* Rojo */
+    16%  { --color-acento-rgb: #ff8e3b; } /* Naranja */
+    33%  { --color-acento-rgb: #ffdb3b; } /* Amarillo */
+    50%  { --color-acento-rgb: #3bff75; } /* Verde */
+    66%  { --color-acento-rgb: #3bbfff; } /* Azul */
+    83%  { --color-acento-rgb: #a43bff; } /* Morado */
+    100% { --color-acento-rgb: #ff3b3b; } /* Vuelve al Rojo */
+}
