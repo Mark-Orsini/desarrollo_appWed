@@ -18,7 +18,7 @@ function llamarEje1() {
 // Ejercicio 2
 
 function ejercicio(limite) {
-    listaImpar = []
+    let listaImpar = []
     for (let i = 1; i <= limite; i++) {
         if (i % 2 === 0) {
             
@@ -26,6 +26,7 @@ function ejercicio(limite) {
             listaImpar.push(i)
         };
     };
+    return listaImpar
 };
 
 function mostrar() {
@@ -34,22 +35,21 @@ function mostrar() {
     let resultado = ejercicio(input1)
 
     document.getElementById("mostrar").innerHTML =
-    `<p>Los numeros pares son: ${listPar}</p>`;
+    `<p>Los numeros impares son: ${resultado.join(",")}</p>`;
 };
 
+// --- FUNCIONALIDAD PARA LA TECLA ENTER ---
+
+// Obtenemos las referencias a los inputs
+const input2 = document.getElementById("input10");
+
+// Añadimos un "event listener" a cada input para detectar la tecla Enter
+input2.addEventListener("keydown", function(event) {
+    // Verificamos si la tecla presionada es 'Enter'
+    if (event.key === "Enter") {
+        event.preventDefault(); // Evita el comportamiento por defecto (ej. envío de formulario si hay uno)
+        mostrar(); // Llama a la función que activa el botón
+    }
+});
 
 
-// ------
-function mostrarPar() {
-    let listPar = []
-    for (let n = 1; n <= 20; n++) {
-        if (n % 2 === 0) {
-            listPar.push(n)
-            alert(n+" Es par")
-        } else {
-            alert(n+" No es par")
-        }
-    };
-    document.getElementById("mostrarPar").innerHTML =
-    `<p>Los numeros pares son: ${listPar}</p>`;
-}; 
