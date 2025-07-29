@@ -21,9 +21,10 @@ function ejercicio(limite) {
     let listaImpar = []
     for (let i = 1; i <= limite; i++) {
         if (i % 2 === 0) {
-            
+            console.log(`${i} es par`)
         } else {
             listaImpar.push(i)
+            console.log(`${i} es impar`)
         };
     };
     return listaImpar
@@ -34,8 +35,12 @@ function mostrar() {
 
     let resultado = ejercicio(input1)
 
+    console.log("Los numeros son: ",resultado.join(","))
+
     document.getElementById("mostrar").innerHTML =
     `<p>Los numeros impares son: ${resultado.join(",")}</p>`;
+
+    alert("Los numeros impares son: "+resultado.join(","))
 };
 
 // --- FUNCIONALIDAD PARA LA TECLA ENTER ---
