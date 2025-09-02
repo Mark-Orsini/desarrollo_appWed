@@ -8,7 +8,42 @@
 </head>
 <body>
     
-    
+    <div class="main">
+        <h1 class="text">Registro de Estudiante</h1>
+        
+        <div id="loginOverlay" class="overlay">
+            <div id="loginPanel" class="panel">
+                <button id="closePanelBtn" class="close-btn">✕</button>
+                
+                <form id="registerForm" class="auth-form hidden">
+                    <div class="form-group">
+                        <input type="text" id="registerName" class="form-input" placeholder="Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" id="registerLastName" class="form-input" placeholder="Edad">
+                    </div>
+                    <label for="fruta">Curso: </label>
+                        <select id="fruta" name="fruta">
+                            <option value="manzana">1° Medio</option>
+                            <option value="banana">2° Medio</option>
+                            <option value="naranja">3° Medio</option>
+                            <option value="uva">4° Medio</option>
+                        </select>
+                    <div class="form-group">
+                        <h3>Mañana</h3>
+                        <input type="radio" id="registerPassword" class="form-input">
+                        <h3>Tarde</h3>
+                        <input type="radio" id="registerPassword" class="form-input">
+                    </div>
+                    <div class="terminos">
+                        <h3>Acepto los terminos y condiciones</h3>
+                        <input type="checkbox" required>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
 
     <script src="./static/js/main.js"></script>
 </body>
