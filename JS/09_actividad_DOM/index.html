@@ -8,41 +8,59 @@
 </head>
 <body>
     
-    <div class="main">
-        <h1 class="text">Registro de Estudiante</h1>
-        
-        <div id="loginOverlay" class="overlay">
-            <div id="loginPanel" class="panel">
-                <button id="closePanelBtn" class="close-btn">✕</button>
-                
-                <form id="registerForm" class="auth-form hidden">
-                    <div class="form-group">
-                        <input type="text" id="registerName" class="form-input" placeholder="Nombre" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="number" id="registerLastName" class="form-input" placeholder="Edad">
-                    </div>
-                    <label for="fruta">Curso: </label>
-                        <select id="fruta" name="fruta">
-                            <option value="manzana">1° Medio</option>
-                            <option value="banana">2° Medio</option>
-                            <option value="naranja">3° Medio</option>
-                            <option value="uva">4° Medio</option>
-                        </select>
-                    <div class="form-group">
-                        <h3>Mañana</h3>
-                        <input type="radio" id="registerPassword" class="form-input">
-                        <h3>Tarde</h3>
-                        <input type="radio" id="registerPassword" class="form-input">
-                    </div>
-                    <div class="terminos">
-                        <h3>Acepto los terminos y condiciones</h3>
-                        <input type="checkbox" required>
-                    </div>
-                </form>
+    <div class="container">
+        <h1>Registro de Estudiante</h1>
+        <form id="inscripcionForm" novalidate>
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" placeholder="Ingrese su nombre">
             </div>
-        </div>
 
+            <div class="form-group">
+                <label for="edad">Edad</label>
+                <input type="number" id="edad" placeholder="Ingrese su edad">
+            </div>
+
+            <div class="form-group">
+                <label for="curso">Curso</label>
+                <select id="curso">
+                    <option value="">Selecciona tu curso</option>
+                    <option value="1° Medio">1° Medio</option>
+                    <option value="2° Medio">2° Medio</option>
+                    <option value="3° Medio">3° Medio</option>
+                    <option value="4° Medio">4° Medio</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Jornada</label>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="jornada" value="Mañana"> 
+                        <span>Mañana</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="jornada" value="Tarde">
+                        <span>Tarde</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="checkbox-group">
+                    <input type="checkbox" id="reglamento">
+                    <span>Acepto el Reglamento</span>
+                </label>
+            </div>
+            
+            <button type="submit" id="enviarBtn">Enviar Registro</button>
+            <button type="button" id="limpiarBtn">Limpiar</button>
+
+            <p class="error" id="mensajeError"></p>
+            <p class="resultado" id="mensajeResultado"></p>
+            
+            <div id="resumen"></div>
+        </form>
     </div>
 
     <script src="./static/js/main.js"></script>
