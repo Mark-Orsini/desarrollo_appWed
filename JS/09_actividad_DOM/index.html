@@ -3,64 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> </title>
-    <link rel="stylesheet" href="./static/css/style.css">
+    <title>Portal de Ejercicios</title>
+    <link rel="stylesheet" href="./static/css/main.css">
 </head>
 <body>
+    <div class="floating-particles" id="particles"></div>
     
     <div class="container">
-        <h1>Registro de Estudiante</h1>
-        <form id="inscripcionForm" novalidate>
-            <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" placeholder="Ingrese su nombre">
-            </div>
-
-            <div class="form-group">
-                <label for="edad">Edad</label>
-                <input type="number" id="edad" placeholder="Ingrese su edad">
-            </div>
-
-            <div class="form-group">
-                <label for="curso">Curso</label>
-                <select id="curso">
-                    <option value="">Selecciona tu curso</option>
-                    <option value="1° Medio">1° Medio</option>
-                    <option value="2° Medio">2° Medio</option>
-                    <option value="3° Medio">3° Medio</option>
-                    <option value="4° Medio">4° Medio</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label>Jornada</label>
-                <div class="radio-group">
-                    <label class="radio-option">
-                        <input type="radio" name="jornada" value="Mañana"> 
-                        <span>Mañana</span>
-                    </label>
-                    <label class="radio-option">
-                        <input type="radio" name="jornada" value="Tarde">
-                        <span>Tarde</span>
-                    </label>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="checkbox-group">
-                    <input type="checkbox" id="reglamento">
-                    <span>Acepto el Reglamento</span>
-                </label>
-            </div>
+        <h1 class="text">Ejercicios de Programación</h1>
+        
+        <div class="exercises-grid">
+            <a href="./pages/eje1.html" class="exercise-card">
+                <div class="exercise-title">Ejercicio 1</div>
+                <div class="exercise-description">Conceptos básicos y fundamentos</div>
+            </a>
             
-            <button type="submit" id="enviarBtn">Enviar Registro</button>
-            <button type="button" id="limpiarBtn">Limpiar</button>
-
-            <p class="error" id="mensajeError"></p>
-            <p class="resultado" id="mensajeResultado"></p>
+            <a href="pages/ejercicio2.html" class="exercise-card">
+                <div class="exercise-title">Ejercicio 2</div>
+                <div class="exercise-description">Operaciones matemáticas</div>
+            </a>
             
-            <div id="resumen"></div>
-        </form>
+            <a href="pages/ejercicio3.html" class="exercise-card">
+                <div class="exercise-title">Ejercicio 3</div>
+                <div class="exercise-description">Algoritmos y lógica</div>
+            </a>
+            
+            <a href="pages/ejercicio4.html" class="exercise-card">
+                <div class="exercise-title">Ejercicio 4</div>
+                <div class="exercise-description">Desafío avanzado</div>
+            </a>
+        </div>
     </div>
 
     <script src="./static/js/main.js"></script>

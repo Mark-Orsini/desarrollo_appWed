@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <link rel="stylesheet" href="./static/css/style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Registro de Estudiante</h1>
+        <form id="inscripcionForm" novalidate>
+            <div class="form-group">
+                <label class="text" for="nombre">Nombre</label>
+                <input type="text" id="nombre" placeholder="Ingrese su nombre">
+            </div>
+
+            <div class="form-group">
+                <label class="text" for="edad">Edad</label>
+                <input type="number" id="edad" placeholder="Ingrese su edad">
+            </div>
+
+            <div class="form-group">
+                <label class="text" for="curso">Curso</label>
+                <select id="curso">
+                    <option value="">Selecciona tu curso</option>
+                    <option value="1° Medio">1° Medio</option>
+                    <option value="2° Medio">2° Medio</option>
+                    <option value="3° Medio">3° Medio</option>
+                    <option value="4° Medio">4° Medio</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="text">Jornada</label>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="jornada" value="Mañana"> 
+                        <span class="text">Mañana</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="jornada" value="Tarde">
+                        <span class="text">Tarde</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="checkbox-group">
+                    <input type="checkbox" id="reglamento">
+                    <span class="text">Acepto el Reglamento</span>
+                </label>
+            </div>
+            
+            <button type="submit" id="enviarBtn">Enviar Registro</button>
+            <button type="button" id="limpiarBtn">Limpiar</button>
+
+            <p class="text error" id="mensajeError"></p>
+            <p class="text resultado" id="mensajeResultado"></p>
+            
+            <div class="text" id="resumen"></div>
+        </form>
+    </div>
+
+    <script src="./static/js/main.js"></script>
+</body>
+</html>
