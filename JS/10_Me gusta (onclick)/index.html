@@ -3,20 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dojonary</title>
     <link rel="stylesheet" href="./static/css/main.css">
 </head>
 <body>
     
     <div class="container">
-        <div class="row">
-            <button onclick="example(this)">
-                Hazme Click
-            </button>
-            <button onclick="turnOff(this)">On</button>
-            <button onclick="turnOff(this)">On</button>
-            <button onclick="turnOff(this)">On</button>
-            <button onclick="remove(this)">Eliminar</button>
+        <nav class="bar">
+            <h1 class="text-dojo">Dojonary</h1>
+            <input class="input-search" type="text" placeholder="Search">
+            <button class="btn-log">Login</button>
+        </nav>
+
+        <div class="bodyco">
+            <div class="pt1">
+                <div class="ninja1">
+                    <div class="izq1">
+                        <div class="izq-texts">
+                            <h1 class="text-ninja">ninja</h1>
+                            <p class="text-ninja2">noun</p>
+                            <p class="text-ninja2">Plural: ninjas</p>
+                        </div>
+                        <div class="btn-likes">
+                            <button class="likes-btn"><span class="like-btn" id="btn-lik">13</span>Likes</button>
+                        </div>
+                    </div>
+                    <div class="der1">
+                        <h4>A practitioner skilled in the <a class="text-a" href="#">Japanese</a>art of <a class="text-a" href="#">ninjutsu</a></h4>
+                    </div>
+                </div>
+                <div class="ninja2">
+                    <div class="izq2">
+                        <div class="izq2-text">
+                            <h1 class="text-ninja">ninja</h1>
+                            <p class="text-ninja2">noun</p>
+                            <p class="text-ninja2">Plural: ninjas</p>
+                        </div>
+                        <div class="btn-likes">
+                            <button class="likes-btn"><span class="like-btn" id="btn-lik2">37</span>Likes</button>
+                        </div>
+                    </div>
+                    <div class="der2">
+                        <h4>A <a class="text-a" href="#">programmer</a> who breaks down problems whith <a class="text-a" href="#">zen</a>-like focus</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="pt2">
+                <h2 class="pt2-text">Dojonary is defined by <span class="you-text">YOU</span></h2>
+                <button class="btn-pt2">Add Definition</button>
+            </div>
         </div>
     </div>
 
