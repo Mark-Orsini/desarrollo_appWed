@@ -12,7 +12,7 @@
         <nav class="bar">
             <h1 class="text-dojo">Dojonary</h1>
             <input class="input-search" type="text" placeholder="Search">
-            <button class="btn-log">Login</button>
+            <button class="btn-log" id="login-btn" onclick="login()">Login</button>
         </nav>
 
         <div class="bodyco">
@@ -25,13 +25,17 @@
                             <p class="text-ninja2">Plural: ninjas</p>
                         </div>
                         <div class="btn-likes">
-                            <button class="likes-btn"><span class="like-btn" id="btn-lik">13</span>Likes</button>
+                            <button class="likes-btn tooltip" onclick="like(1)">
+                                <span class="like-btn" id="btn-lik">13</span> likes
+                                <span class="tooltip-text">Like this definition</span>
+                            </button>
                         </div>
                     </div>
                     <div class="der1">
-                        <h4>A practitioner skilled in the <a class="text-a" href="#">Japanese</a>art of <a class="text-a" href="#">ninjutsu</a></h4>
+                        <h4>A practitioner skilled in the <a class="text-a" href="#">Japanese</a> art of <a class="text-a" href="#">ninjutsu</a></h4>
                     </div>
                 </div>
+                
                 <div class="ninja2">
                     <div class="izq2">
                         <div class="izq2-text">
@@ -40,17 +44,21 @@
                             <p class="text-ninja2">Plural: ninjas</p>
                         </div>
                         <div class="btn-likes">
-                            <button class="likes-btn"><span class="like-btn" id="btn-lik2">37</span>Likes</button>
+                            <button class="likes-btn tooltip" onclick="like(2)">
+                                <span class="like-btn" id="btn-lik2">37</span> likes
+                                <span class="tooltip-text">Like this definition</span>
+                            </button>
                         </div>
                     </div>
                     <div class="der2">
-                        <h4>A <a class="text-a" href="#">programmer</a> who breaks down problems whith <a class="text-a" href="#">zen</a>-like focus</h4>
+                        <h4>A <a class="text-a" href="#">programmer</a> who breaks down problems with <a class="text-a" href="#">zen</a>-like focus</h4>
                     </div>
                 </div>
             </div>
+            
             <div class="pt2">
                 <h2 class="pt2-text">Dojonary is defined by <span class="you-text">YOU</span></h2>
-                <button class="btn-pt2">Add Definition</button>
+                <button class="btn-pt2" id="add-def-btn" onclick="addDefinition()">Add Definition</button>
             </div>
         </div>
     </div>
