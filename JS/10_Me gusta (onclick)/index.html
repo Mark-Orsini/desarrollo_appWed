@@ -12,7 +12,7 @@
         <nav class="bar">
             <h1 class="text-dojo">Dojonary</h1>
             <input class="input-search" type="text" placeholder="Search">
-            <button class="btn-log" id="login-btn" onclick="login()">Login</button>
+            <button class="btn-log" id="login-btn" onclick="login(this)">Login</button>
         </nav>
 
         <div class="bodyco">
@@ -25,7 +25,7 @@
                             <p class="text-ninja2">Plural: ninjas</p>
                         </div>
                         <div class="btn-likes">
-                            <button class="likes-btn tooltip" onclick="like(1)">
+                            <button class="likes-btn tooltip" onclick="like(this)">
                                 <span class="like-btn" id="btn-lik">13</span> likes
                                 <span class="tooltip-text">Like this definition</span>
                             </button>
@@ -44,7 +44,7 @@
                             <p class="text-ninja2">Plural: ninjas</p>
                         </div>
                         <div class="btn-likes">
-                            <button class="likes-btn tooltip" onclick="like(2)">
+                            <button class="likes-btn tooltip" onclick="like(this)">
                                 <span class="like-btn" id="btn-lik2">37</span> likes
                                 <span class="tooltip-text">Like this definition</span>
                             </button>
@@ -58,7 +58,7 @@
             
             <div class="pt2">
                 <h2 class="pt2-text">Dojonary is defined by <span class="you-text">YOU</span></h2>
-                <button class="btn-pt2" id="add-def-btn" onclick="addDefinition()">Add Definition</button>
+                <button class="btn-pt2" id="add-def-btn" onclick="btnBorrar(this)">Add Definition</button>
             </div>
         </div>
     </div>
