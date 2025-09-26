@@ -1,109 +1,97 @@
-const registros = [];
+let registrosEstudiantes = [];
 
-const form = document.getElementById('inscripcionForm');
-const nombreInput = document.getElementById('nombre');
-const edadInput = document.getElementById('edad');
-const cursoInput = document.getElementById('curso');
-const reglamentoInput = document.getElementById('reglamento');
+function normalizarNombre(nombre) {
+    return nombre.trim()
+        .split(' ')
+        .map(palabra => palabra.charAt(0).toUpperCase() + palabra.slice(1).toLowerCase())
+        .join(' ');
+}
 
-const mensajeError = document.getElementById('mensajeError');
-const mensajeResultado = document.getElementById('mensajeResultado');
-const resumenDiv = document.getElementById('resumen');
-const limpiarBtn = document.getElementById('limpiarBtn');
+function validarFormulario() {
+    const nombre = document.getElementById('nombre').value;
+    const edad = parseInt(document.getElementById('edad').value);
+    const curso = document.getElementById('curso').value;
+    const jornada = document.querySelector('input[name="jornada"]:checked');
+    const reglamento = document.getElementById('reglamento').checked;
 
-form.addEventListener('submit', function(event) {
-    event.preventDefault(); 
-    procesarFormulario();
-});
+    let errores = [];
 
-limpiarBtn.addEventListener('click', function() {
-    form.reset(); 
-    mensajeError.textContent = '';
-    mensajeResultado.textContent = '';
-    mensajeError.style.display = 'none';
-    mensajeResultado.style.display = 'none';
-});
+    if (!nombre || nombre.trim().length < 2) {
+        errores.push('El nombre debe tener al menos 2 caracteres');
+    }
 
-function procesarFormulario() {
-    mensajeError.textContent = '';
-    mensajeResultado.textContent = '';
-    mensajeError.style.display = 'none';
-    mensajeResultado.style.display = 'none';
+    if (!edad || edad < 14 || edad > 100) {
+        errores.push('La edad debe estar entre 14 y 100 años');
+    }
 
-    const nombre = nombreInput.value.trim(); 
-    const edad = parseInt(edadInput.value); 
-    const curso = cursoInput.value;
-    const jornadaSeleccionada = document.querySelector('input[name="jornada"]:checked')?.value;
-    const reglamentoAceptado = reglamentoInput.checked;
+    if (!curso) {
+        errores.push('Debe seleccionar un curso');
+    }
+
+    if (!jornada) {
+        errores.push('Debe seleccionar una jornada');
+    }
+
+    if (!reglamento) {
+        errores.push('Debe aceptar el reglamento');
+    }
+
+    return errores;
+}
+
+function generarResumenJornadas() {
+    const conteoJornadas = { Mañana: 0, Tarde: 0 };
     
-    const errores = []; 
+    for (let i = 0; i < registrosEstudiantes.length; i++) {
+        conteoJornadas[registrosEstudiantes[i].jornada]++;
+    }
+
+    return `Registrados: ${conteoJornadas.Mañana} en Mañana, ${conteoJornadas.Tarde} en Tarde`;
+}
+
+function mostrarResultado(estudiante) {
+    const salida = document.getElementById('salida');
+    const saludo = `Hola ${estudiante.nombre}, de ${estudiante.edad} años. Has sido registrado en ${estudiante.curso}, jornada ${estudiante.jornada}.`;
     
-    if (nombre.length < 3) {
-        errores.push("El nombre debe tener al menos 3 caracteres.");
-    }
-    if (isNaN(edad) || edad < 14 || edad > 100) {
-        errores.push("La edad debe ser un número entre 14 y 100 años.");
-    }
-    if (curso === "") {
-        errores.push("Debes seleccionar un curso.");
-    }
-    if (!jornadaSeleccionada) {
-        errores.push("Debes seleccionar una jornada.");
-    }
-    if (!reglamentoAceptado) {
-        errores.push("Debes aceptar el reglamento.");
-    }
+    salida.innerHTML = `
+        <div class="resultado">${saludo}</div>
+        <div class="resumen">
+            <strong>Resumen:</strong><br>
+            ${generarResumenJornadas()}<br>
+            Total: ${registrosEstudiantes.length} estudiantes
+        </div>
+    `;
+}
+
+function mostrarError(errores) {
+    const salida = document.getElementById('salida');
+    salida.innerHTML = `<div class="error">Errores:<br>• ${errores.join('<br>• ')}</div>`;
+}
+
+document.getElementById('registroForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const errores = validarFormulario();
     
     if (errores.length > 0) {
-        mensajeError.innerHTML = errores.join('<br>');
-        mensajeError.style.display = 'block';
-        return; 
+        mostrarError(errores);
+        return;
     }
-    
-    const nombreNormalizado = capitalizarNombre(nombre);
-    
-    mensajeResultado.textContent = `Bienvenido, ${nombreNormalizado}. Tu registro para ${curso} en la jornada de ${jornadaSeleccionada} a los ${edad} años ha sido exitoso.`;
-    mensajeResultado.style.display = 'block';
 
     const nuevoEstudiante = {
-        nombre: nombreNormalizado,
-        edad: edad,
-        curso: curso,
-        jornada: jornadaSeleccionada
+        nombre: normalizarNombre(document.getElementById('nombre').value),
+        edad: parseInt(document.getElementById('edad').value),
+        curso: document.getElementById('curso').value,
+        jornada: document.querySelector('input[name="jornada"]:checked').value
     };
+
+    registrosEstudiantes.push(nuevoEstudiante);
+    mostrarResultado(nuevoEstudiante);
     
-    registros.push(nuevoEstudiante);
-    
-    actualizarResumen();
-    
-    form.reset();
-}
+    document.getElementById('registroForm').reset();
+});
 
-
-function actualizarResumen() {
-    let contadorManana = 0;
-    let contadorTarde = 0;
-
-    for (const estudiante of registros) {
-        if (estudiante.jornada === 'Mañana') {
-            contadorManana++;
-        } else if (estudiante.jornada === 'Tarde') {
-            contadorTarde++;
-        }
-    }
-    
-    resumenDiv.textContent = `Total Registrados: ${registros.length} (Mañana: ${contadorManana}, Tarde: ${contadorTarde})`;
-}
-
-/**
- * @param {string} nombreCompleto - El nombre a capitalizar.
- * @returns {string} El nombre capitalizado.
- */
-
-function capitalizarNombre(nombreCompleto) {
-    return nombreCompleto
-        .toLowerCase()
-        .split(' ') // Divide el string en un arreglo de palabras.
-        .map(palabra => palabra.charAt(0).toUpperCase() + palabra.slice(1)) // Capitaliza la primera letra de cada palabra.
-        .join(' '); // Une las palabras de nuevo en un string.
-}
+document.getElementById('limpiarBtn').addEventListener('click', function() {
+    document.getElementById('registroForm').reset();
+    document.getElementById('salida').innerHTML = '';
+});

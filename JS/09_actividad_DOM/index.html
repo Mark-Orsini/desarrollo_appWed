@@ -3,38 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal de Ejercicios</title>
+    <title>Ejercicios</title>
     <link rel="stylesheet" href="./static/css/main.css">
 </head>
 <body>
-    <div class="floating-particles" id="particles"></div>
-    
     <div class="container">
-        <h1 class="text">Ejercicios de Programación</h1>
+        <h1>Ejercicios de Programación</h1>
         
-        <div class="exercises-grid">
-            <a href="./pages/eje1.html" class="exercise-card">
-                <div class="exercise-title">Ejercicio 1</div>
-                <div class="exercise-description">Conceptos básicos y fundamentos</div>
-            </a>
-            
-            <a href="pages/ejercicio2.html" class="exercise-card">
-                <div class="exercise-title">Ejercicio 2</div>
-                <div class="exercise-description">Operaciones matemáticas</div>
-            </a>
-            
-            <a href="pages/ejercicio3.html" class="exercise-card">
-                <div class="exercise-title">Ejercicio 3</div>
-                <div class="exercise-description">Algoritmos y lógica</div>
-            </a>
-            
-            <a href="pages/ejercicio4.html" class="exercise-card">
-                <div class="exercise-title">Ejercicio 4</div>
-                <div class="exercise-description">Desafío avanzado</div>
-            </a>
+        <ul class="exercise-list">
+            <li class="exercise-item" onclick="window.location.href='./pages/eje1.html'">
+                <div class="exercise-title">Ejercicio 1 - Registro de Estudiante</div>
+                <div class="exercise-description">
+                    Formulario para registrar estudiantes con validaciones y resúmenes.
+                </div>
+            </li>
+
+            <li class="exercise-item" onclick="window.location.href='./pages/eje2.html'">
+                <div class="exercise-title">Ejercicio 2 - Calculadora de Promedio</div>
+                <div class="exercise-description">
+                    Calcular promedio de notas y determinar si está aprobado o reprobado.
+                </div>
+            </li>
+
+            <li class="exercise-item" onclick="window.location.href='./pages/eje3.html'">
+                <div class="exercise-title">Ejercicio 3 - Gestor de Tareas</div>
+                <div class="exercise-description">
+                    Lista de tareas con fechas, prioridades y filtros.
+                </div>
+            </li>
+
+            <li class="exercise-item" onclick="window.location.href='./pages/eje4.html'">
+                <div class="exercise-title">Ejercicio 4 - Encuesta Tecnológica</div>
+                <div class="exercise-description">
+                    Encuesta sobre preferencias de programación con reportes.
+                </div>
+            </li>
+        </ul>
+
+        <div class="footer">
+            Selecciona un ejercicio para empezar
         </div>
     </div>
-
-    <script src="./static/js/main.js"></script>
 </body>
 </html>

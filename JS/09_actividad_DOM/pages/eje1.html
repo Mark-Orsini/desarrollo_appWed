@@ -3,66 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> </title>
-    <link rel="stylesheet" href="./static/css/style.css">
+    <title>Registro de Estudiante</title>
+    <link rel="stylesheet" href="/JS/09_actividad_DOM/static/css/styleEje1.css">
 </head>
 <body>
-    
     <div class="container">
+        <a href="../index.html" class="back-link">← Volver al inicio</a>
         <h1>Registro de Estudiante</h1>
-        <form id="inscripcionForm" novalidate>
+
+        <form id="registroForm">
             <div class="form-group">
-                <label class="text" for="nombre">Nombre</label>
-                <input type="text" id="nombre" placeholder="Ingrese su nombre">
+                <label for="nombre">Nombre completo *</label>
+                <input type="text" id="nombre" name="nombre" required>
             </div>
 
             <div class="form-group">
-                <label class="text" for="edad">Edad</label>
-                <input type="number" id="edad" placeholder="Ingrese su edad">
+                <label for="edad">Edad *</label>
+                <input type="number" id="edad" name="edad" min="14" max="100" required>
             </div>
 
             <div class="form-group">
-                <label class="text" for="curso">Curso</label>
-                <select id="curso">
-                    <option value="">Selecciona tu curso</option>
-                    <option value="1° Medio">1° Medio</option>
-                    <option value="2° Medio">2° Medio</option>
+                <label for="curso">Curso *</label>
+                <select id="curso" name="curso" required>
+                    <option value="">Seleccione un curso</option>
                     <option value="3° Medio">3° Medio</option>
                     <option value="4° Medio">4° Medio</option>
+                    <option value="1° Universitario">1° Universitario</option>
+                    <option value="2° Universitario">2° Universitario</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label class="text">Jornada</label>
+                <label>Jornada *</label>
                 <div class="radio-group">
-                    <label class="radio-option">
-                        <input type="radio" name="jornada" value="Mañana"> 
-                        <span class="text">Mañana</span>
-                    </label>
-                    <label class="radio-option">
-                        <input type="radio" name="jornada" value="Tarde">
-                        <span class="text">Tarde</span>
-                    </label>
+                    <div class="radio-option">
+                        <input type="radio" id="manana" name="jornada" value="Mañana" required>
+                        <label for="manana">Mañana</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="tarde" name="jornada" value="Tarde" required>
+                        <label for="tarde">Tarde</label>
+                    </div>
                 </div>
             </div>
 
             <div class="form-group">
-                <label class="checkbox-group">
-                    <input type="checkbox" id="reglamento">
-                    <span class="text">Acepto el Reglamento</span>
-                </label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="reglamento" name="reglamento" required>
+                    <label for="reglamento">Acepto el reglamento *</label>
+                </div>
             </div>
-            
-            <button type="submit" id="enviarBtn">Enviar Registro</button>
-            <button type="button" id="limpiarBtn">Limpiar</button>
 
-            <p class="text error" id="mensajeError"></p>
-            <p class="text resultado" id="mensajeResultado"></p>
-            
-            <div class="text" id="resumen"></div>
+            <button type="submit">Registrar</button>
+            <button type="button" id="limpiarBtn" class="btn-clear">Limpiar</button>
         </form>
+
+        <div id="salida"></div>
     </div>
 
-    <script src="./static/js/main.js"></script>
+    <script src="/js/09_actividad_DOM/static/js/eje1.js"></script>
 </body>
 </html>
