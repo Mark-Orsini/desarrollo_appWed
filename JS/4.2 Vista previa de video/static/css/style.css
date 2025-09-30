@@ -13,34 +13,30 @@ body {
 /* Top Navigation */
 .top {
     background: linear-gradient(to right, #6b21a8, #7c3aed);
-    z-index: 1000;
-    border-bottom: 3px solid #7c3aed;
     align-items: center;
+    height: 10px;
 }
 
 .nav-container {
     display: flex;
-    align-items: center;
-    padding: 15px 30px;
     background-color: #333;
     gap: 20px;
+    justify-content: space-between;
+    padding: 15px;
+    margin-top: -1px;
 }
 
 .nav-container h1 {
     color: white;
     font-size: 28px;
-    font-weight: 600;
     margin: 0;
 }
 
 .search {
     flex: 1;
-    max-width: 400px;
     padding: 8px 15px;
     border: 2px solid #555;
-    border-radius: 4px;
     font-size: 14px;
-    background-color: white;
 }
 
 .search:focus {
